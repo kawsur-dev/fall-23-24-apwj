@@ -16,6 +16,7 @@ public class FirstServlet extends HttpServlet {
         printWriter.write("<br><br>");
         printWriter.write("<input type='submit'>");
         printWriter.write("</form>");
+
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
