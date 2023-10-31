@@ -5,11 +5,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>First App</title>
+    <title>Person List</title>
 </head>
 <body>
 
-<a href="first">First Page</a>
+<c:forEach items="${persons}" var="person">
+    ${person.id} - ${person.name}
+    <hr>
+</c:forEach>
 
 </body>
 </html>

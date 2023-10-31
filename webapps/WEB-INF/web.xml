@@ -99,11 +99,6 @@
         <load-on-startup>5</load-on-startup>
     </servlet>
 
-    <servlet>
-        <servlet-name>Second</servlet-name>
-        <servlet-class>SecondServlet</servlet-class>
-    </servlet>
-
 
     <!-- Define mappings that are used by the servlet container to
          translate a particular request URI (context-relative) to a
@@ -126,10 +121,6 @@
     <servlet-mapping>
         <servlet-name>First</servlet-name>
         <url-pattern>/first</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>Second</servlet-name>
-        <url-pattern>/second</url-pattern>
     </servlet-mapping>
 
 
