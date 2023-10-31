@@ -11,38 +11,19 @@
 </head>
 <body>
 
-<h1>Second App</h1>
-
-<!-- declaration -->
-<%! String name = "Mir Md kawsur";
-    String toUpper(String s1) {
-        return s1.toUpperCase();
-    }
-    int i = 100;
-%>
-
-<!-- expression -->
-<%= toUpper(name) + " " + i %>
-
-<!-- scriptlet -->
-<%
-String name=(String)session.getAttribute("user");
-out.print("Hello "+name);
-%>
-
-Today is: <%= new Date() %>
-
-<br>
-
-<%! Utility u = new Utility(); %>
-
+<c:set var="i" value="200" />
+<c:set var="arr1" value="XYZ, YZA, ABC, XXY, YYX, UUI, IIO" />
 <c:out value="${i}" />
 
-<br><br>
+<c:forEach items="${arr1}" var="x">
+   <c:if test = "${x == 'XYZ' }">
+       Just Print
+   </c:if>
 
-<a href="first.jsp">First JSP Page</a>
-
-
+   <c:if test = "${! (x == 'XYZ') }">
+        Exceptional Just Print
+   </c:if>
+</c:forEach>
 
 </body>
 </html>
