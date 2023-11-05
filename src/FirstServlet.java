@@ -9,6 +9,8 @@ import java.util.List;
 public class FirstServlet extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        System.out.println("First Servlet: doGet");
+        System.out.println("First Servlet: " + request.getAttribute("test"));
         if (request.getParameter("COMMAND") != null) {
             if (request.getParameter("COMMAND").equals("UPDATE_PAGE")) {
                 RequestDispatcher requestDispatcher = request.getRequestDispatcher("person-update.jsp");
@@ -52,6 +54,7 @@ public class FirstServlet extends HttpServlet {
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        System.out.println("First Servlet: doPost");
         Person person = new Person(Integer.parseInt(request.getParameter("id")), request.getParameter("name"));
         try {
             DBUtil.create(person);

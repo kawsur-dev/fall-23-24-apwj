@@ -84,6 +84,16 @@
          You can define any number of servlets, including zero.
     -->
 
+    <filter>
+        <filter-name>FirstFilter</filter-name>
+        <filter-class>FirstFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>FirstFilter</filter-name>
+        <servlet-name>First</servlet-name>
+    </filter-mapping>
+
     <servlet>
         <servlet-name>First</servlet-name>
         <servlet-class>FirstServlet</servlet-class>
